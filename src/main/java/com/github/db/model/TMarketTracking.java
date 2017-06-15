@@ -1,5 +1,7 @@
 package com.github.db.model;
 
+import java.util.Date;
+
 public class TMarketTracking {
     private Integer id;
 
@@ -9,6 +11,8 @@ public class TMarketTracking {
 
     private String rawUrl;
 
+    private Date createTime;
+    
     public Integer getId() {
         return id;
     }
@@ -40,4 +44,12 @@ public class TMarketTracking {
     public void setRawUrl(String rawUrl) {
         this.rawUrl = rawUrl == null ? null : rawUrl.trim();
     }
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 }

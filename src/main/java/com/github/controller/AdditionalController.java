@@ -1,5 +1,7 @@
 package com.github.controller;
 
+import java.util.Date;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -36,6 +38,7 @@ public class AdditionalController{
 	        record.setActivityId(aId);
 	        record.setChannel(cId);
 	        record.setRawUrl(request.getRequestURL().toString() + "?" + request.getQueryString());
+	        record.setCreateTime(new Date());
 	        try{
 	        	mtMapper.insertSelective(record);
 	        }catch(Exception e){
