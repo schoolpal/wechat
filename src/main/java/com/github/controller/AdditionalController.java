@@ -24,7 +24,7 @@ public class AdditionalController{
     
     @RequestMapping(value = "marketTracking", method = RequestMethod.GET)
     public String getUserInfo(HttpServletRequest request, HttpServletResponse response, String aId, String cId) {
-    	        
+    	String redirectUrl = "http://mp.weixin.qq.com/s/-U1HwPzI-pBXZ1GKFhULKw";
         do{
             this.logger.info(request.getRequestURL().toString());
             
@@ -43,7 +43,7 @@ public class AdditionalController{
 	        }
         }while(false);
         
-        return "redirect:http://www.baidu.com";
+        return "redirect:" + redirectUrl;
     }
 
 
